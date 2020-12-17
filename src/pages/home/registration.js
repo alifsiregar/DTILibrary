@@ -11,37 +11,40 @@ function UserRegistration() {
       <div className=" w-full flex flex-row justify-between ">
         <Link to="/">
           <div
-            style={{ backgroundColor: '#ECECDA' }}
+            style={{ backgroundColor: '#0E2F56' }}
             className=" m-3 p-3 rounded-lg text-center"
           >
-            <span className=" text-xl">LOGIN</span>
+            <span className=" text-white font-bold text-xl">LOGIN</span>
           </div>
         </Link>
         <div />
         <div />
       </div>
       <div
-        style={{ backgroundColor: '#ECECDA', width: '30rem' }}
-        className=" h-72 pt-3 rounded-lg shadow-lg flex flex-col justify-between"
+        style={{ backgroundColor: '#0E2F56', width: '30rem' }}
+        className=" h-96 pt-3 rounded-lg shadow-lg flex flex-col justify-between"
       >
-        <div className="text-center ">
+        <div className="text-white text-center ">
           <span className=" text-xl">
             <b>PURING</b>
-            {' '}
-            Registration
+            <br />
+            User Registration
           </span>
         </div>
-        <div className="pl-8 flex flex-col ">
+        <div className="items-center flex flex-col ">
           <div className="my-3">
-            <span>Name: </span>
+            <span className="text-white">Name: </span>
+            <br />
             <input className=" w-48" type="text" />
           </div>
           <div className="my-3">
-            <span>Username:</span>
+            <span className="text-white">Username:</span>
+            <br />
             <input className=" w-48" type="text" />
           </div>
           <div className="my-3">
-            <span>Password: </span>
+            <span className="text-white">Password: </span>
+            <br />
             <input type="password" className=" w-48" />
           </div>
         </div>
@@ -49,15 +52,15 @@ function UserRegistration() {
           <button
             type="button"
             style={{ backgroundColor: '#FF304F' }}
-            className="p-2 rounded-lg"
+            className="text-white p-2 rounded-lg"
           >
             <b>REGISTER</b>
           </button>
         </div>
       </div>
       <div
-        style={{ backgroundColor: '#ECECDA', width: '35rem' }}
-        className=" min-w-full pl-3"
+        style={{ backgroundColor: '#0E2F56', width: '35rem' }}
+        className="text-white min-w-full pl-3"
       >
         <span className="">© FE-BE-02 Kelompok 03</span>
       </div>
