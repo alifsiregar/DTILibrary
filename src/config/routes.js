@@ -1,11 +1,16 @@
-// import { Home } from '../pages';
+import { Home, inputBuku } from '../pages';
 
 const routes = [
-  // {
-  //   path: '/',
-  //   component: Home,
-  //   isPublic: true,
-  // },
+  {
+    path: '/inputBuku',
+    component: inputBuku,
+    isPublic: true,
+  },
+  {
+    path: '/',
+    component: Home,
+    isPublic: true,
+  },
 ];
 
 export default routes;
