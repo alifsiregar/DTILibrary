@@ -13,13 +13,9 @@ export default function CreateRakButton() {
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
-  function submit(e) {
-    e.preventDefault();
-    kategoriServices.postKategori({
-      nama,
-      deskripsi,
-    });
-  }
+  const submit = () => {
+    kategoriServices.postKategori(nama, deskripsi).then((res) => res);
+  };
   return (
     <>
       <button
@@ -55,7 +51,14 @@ export default function CreateRakButton() {
             </div>
           </div>
           <div className="max-w-md w-full mx-auto mt-4 bg-white p-8 border border-gray-300">
-            <form action="" onSubmit={submit} className="space-y-6">
+            <form
+              action=""
+              onSubmit={(e) => {
+                e.preventDefault();
+                submit();
+              }}
+              className="space-y-6"
+            >
               <div>
                 <label
                   htmlFor=""
@@ -89,7 +92,7 @@ export default function CreateRakButton() {
                 />
               </div>
               <button
-                onClick={submit}
+                onClick={() => submit()}
                 type="submit"
                 className="bg-blue-1000 w-full text-white font-bold text-base px-4 py-2 rounded"
               >

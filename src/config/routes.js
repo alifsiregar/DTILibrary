@@ -1,13 +1,24 @@
 import {
+  AdminLogin,
+  Home,
+  UserRegistration,
   RakBuku,
   Perpustakaan,
   DetailBuku,
   Pengaturan,
-  Home,
-  NotFound,
 } from '../pages';
 
 const routes = [
+  {
+    path: '/registration',
+    component: UserRegistration,
+    isPublic: true,
+  },
+  {
+    path: '/admin',
+    component: AdminLogin,
+    isPublic: true,
+  },
   {
     path: '/perpustakaan',
     component: Perpustakaan,
@@ -28,11 +39,7 @@ const routes = [
     component: Pengaturan,
     isPublic: true,
   },
-  {
-    path: '**',
-    component: NotFound,
-    isPublic: true,
-  },
+
   {
     path: '/',
     component: Home,

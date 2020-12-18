@@ -14,7 +14,17 @@ const postKategori = (nama, deskripsi) => {
 };
 
 const updateKategori = (nama, deskripsi) => {
-  return BaseService.put(API.CATEGORY, { nama, deskripsi });
+  return BaseService.put(API.UPDATECATEGORY, { nama, deskripsi });
 };
 
-export default { getKategori, postKategori, getKategoriNama, updateKategori };
+const deleteKategori = (_id) => {
+  return BaseService.delete(API.DELETECATEGORY, { _id });
+};
+
+export default {
+  getKategori,
+  postKategori,
+  getKategoriNama,
+  updateKategori,
+  deleteKategori,
+};

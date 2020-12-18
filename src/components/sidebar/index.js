@@ -34,7 +34,7 @@ function Sidebar(match) {
             </div>
           </div>
           <h5 className="text-xl font-semibold text-white">Username</h5>
-          <p className="text-sm font-light text-gray-400">Role</p>
+          <p className="text-sm font-light text-gray-400">Admin</p>
           <ul className="main-menu mt-12">
             <li>
               <Link

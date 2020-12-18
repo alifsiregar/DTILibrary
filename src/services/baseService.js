@@ -2,8 +2,8 @@ import axios from 'axios';
 import { getCookie } from '../utils/cookie';
 
 function getTokenAuth() {
-  if (getCookie('token') && getCookie('userData')) {
-    return JSON.parse(getCookie('token')).value;
+  if (getCookie('token')) {
+    return JSON.parse(getCookie('token'));
   }
   return '';
 }
@@ -22,11 +22,11 @@ const createAxiosInterceptor = (url) => {
     (response) => {
       return response.data;
     },
-    (error) => {
-      if (error.response.status === 401) {
-        window.location.replace('/');
-      }
-      return Promise.reject(error);
+    () => {
+      // if (error.response.status === 401) {
+      //   window.location.replace('/');
+      // }
+      // return Promise.reject(error);
     }
   );
 
