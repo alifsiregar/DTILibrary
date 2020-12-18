@@ -1,10 +1,10 @@
 import {
-  NotFound,
   RakBuku,
   Perpustakaan,
   DetailBuku,
   Pengaturan,
   Home,
+  NotFound,
 } from '../pages';
 
 const routes = [
@@ -29,7 +29,7 @@ const routes = [
     isPublic: true,
   },
   {
-    path: '/notfound',
+    path: '**',
     component: NotFound,
     isPublic: true,
   },

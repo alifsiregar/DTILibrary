@@ -2,25 +2,6 @@
 import React from 'react';
 
 function Home() {
-  // const sideBar = [
-  //   {
-  //     name: 'Perpustakaan',
-  //     path: '/perpustakaan',
-  //   },
-  //   {
-  //     name: 'Rak Buku',
-  //     path: '/rakbuku',
-  //   },
-  //   {
-  //     name: 'Detail Buku',
-  //     path: '/detailbuku',
-  //   },
-  //   {
-  //     name: 'Pengaturan',
-  //     path: '/pengaturan',
-  //   },
-  // ];
-
   return (
     <div className="flex">
       <div className="flex h-screen mx-auto items-center text-center">

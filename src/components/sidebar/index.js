@@ -9,7 +9,6 @@ import { ReactComponent as DefaultUser } from '../../assets/images/default-avata
 
 function Sidebar(match) {
   const navLinkActive = (path) => {
-    console.log('hai');
     return match.path === path ? 'active bg-blue-500' : 'text-white';
   };
 
@@ -21,7 +20,7 @@ function Sidebar(match) {
 
   return (
     <aside
-      className=" bg-blue-1000 max-h-screen h-screen overflow-y-auto"
+      className="bg-blue-1000 max-h-screen h-screen overflow-y-auto"
       style={{ width: 280 }}
     >
       <div
@@ -35,7 +34,7 @@ function Sidebar(match) {
             </div>
           </div>
           <h5 className="text-xl font-semibold text-white">Username</h5>
-          <p className="text-base font-light italic text-gray-400">Role</p>
+          <p className="text-sm font-light text-gray-400">Role</p>
           <ul className="main-menu mt-12">
             <li>
               <Link

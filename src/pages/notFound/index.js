@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function NotFound() {
   return (
     <section className="h-screen flex flex-col items-center">
-      <img src="../assets/images/not-found.png" alt="Page not found" />
+      <img src="../../assets/images/not-found.jpg" alt="Page Not Found" />
       <h1 className="text-3xl text-gray-900 mt-12">Page Not Found</h1>
       <p className="text-lg text-gray-600 mt-4 mtb-8 lg:w-3/12 xl:w-2/12 mx-auto text-center">
         The page that you requested is not found in our system

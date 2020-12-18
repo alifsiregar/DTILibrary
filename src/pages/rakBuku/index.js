@@ -9,13 +9,15 @@ function RakBuku() {
       <Sidebar />
       <main className="flex-1">
         <div className="px-4">
-          <section className="flex flex-col mt-10 pl-7">
-            <h1 className="text-xl sm:text-4xl text-blue-1000 font-medium">
-              Rak Buku
-            </h1>
-            <p className="text-sm sm:text-lg text-gray-600">
-              Tambahkan buku baru
-            </p>
+          <section className="flex justify-between mt-10 px-7">
+            <div className="flex flex-col">
+              <h1 className="text-xl sm:text-4xl text-blue-1000 font-medium">
+                Rak Buku
+              </h1>
+              <p className="text-sm sm:text-lg text-gray-600">
+                Tambahkan buku baru
+              </p>
+            </div>
           </section>
           <section>
             <FormRakBuku />
