@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { homeBg } from '../../assets';
 import { signupService } from '../../services';
 import { getCookie, setCookie } from '../../utils/cookie';
 
 function UserRegistration() {
-  const history = useHistory();
   let message = null;
   const [locationToken, setLocationToken] = useState('');
   const [listProvinsi, setListProvinsi] = useState(null);
@@ -16,11 +15,13 @@ function UserRegistration() {
   const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
   const [gender, setGender] = useState('Pria');
+  const [phone, setPhone] = useState('');
   const [alamat, setAlamat] = useState({});
   const [provinsi, setProvinsi] = useState(null);
   const [kota, setKota] = useState('');
   const [jalan, setJalan] = useState('');
   const [password, setPassword] = useState('');
+  const [rawPassword, setRawPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
@@ -96,12 +97,19 @@ function UserRegistration() {
     setError(null);
     setLoading(true);
     signupService
-      .signup(name, username, email, date, gender, alamat, password)
-      .then(() => {
-        setSuccess('Registration success, redirecting you to login');
-        setTimeout(() => {
-          history.push('/');
-        }, 3000);
+      .signup(
+        name,
+        username,
+        email,
+        date,
+        gender,
+        phone,
+        alamat,
+        rawPassword,
+        password
+      )
+      .then((res) => {
+        setSuccess(res);
       })
       .catch((err) => {
         if (err.response) {
@@ -204,6 +212,18 @@ function UserRegistration() {
             </select>
           </div>
           <div className="my-3">
+            <span className="text-white">Phone Number:</span>
+            <br />
+            <input
+              value={phone}
+              onChange={(e) => {
+                setPhone(e.target.value);
+              }}
+              className=" w-48"
+              type="text"
+            />
+          </div>
+          <div className="my-3">
             <span className="text-white">Provinsi:</span>
             <br />
             {listProvinsi == null ? (
@@ -264,6 +284,18 @@ function UserRegistration() {
           </div>
           <div className="my-3">
             <span className="text-white">Password: </span>
+            <br />
+            <input
+              value={rawPassword}
+              onChange={(e) => {
+                setRawPassword(e.target.value);
+              }}
+              type="password"
+              className=" w-48"
+            />
+          </div>
+          <div className="my-3">
+            <span className="text-white">Confirm Password: </span>
             <br />
             <input
               value={password}
