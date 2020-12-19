@@ -1,10 +1,12 @@
+/* eslint-disable no-console */
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { authService } from '../../services';
 import { setCookie } from '../../utils/cookie';
 import { homeBg } from '../../assets';
 
 function Home() {
+  const history = useHistory();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoginLoading, setLoginLoading] = useState(false);
@@ -19,10 +21,19 @@ function Home() {
         const cookieUser = res.id;
         setCookie('userData', JSON.stringify(cookieUser), 10000);
         setCookie('token', JSON.stringify(cookieToken), 10000);
-        window.location.replace('/katalog');
+        history.push('/katalog');
       })
-      .catch(() => {
-        setError('Username/Password Salah');
+      .catch((err) => {
+        if (
+          err.response.data.error !== null &&
+          err.response.data.error !== undefined &&
+          err.response.data.error !== ''
+        ) {
+          setError(err.response.data.error);
+        } else {
+          setError('Username / Password Salah');
+        }
+        console.log(err.response.data.error);
       })
       .finally(() => {
         setLoginLoading(false);

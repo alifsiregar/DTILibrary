@@ -31,19 +31,9 @@
     "react/prop-types": 0,
     "react/display-name": [0, { "ignoreTranspilerName": true }],
     "no-console": ["warn"],
-    "max-len": ["warn", 400],
+    "max-len": ["warn", 200],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "jsx-a11y/label-has-associated-control": ["error", {
-      "required": {
-        "some": ["nesting", "id"]
-      }
-    }],
-    "jsx-a11y/label-has-for": ["error", {
-      "required": {
-        "some": ["nesting", "id"]
-      }
-    }],
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "arrow-body-style": ["error", "always"],

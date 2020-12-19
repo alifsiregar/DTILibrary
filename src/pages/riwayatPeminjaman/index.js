@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { HeaderPage } from '../../components';
 import { pinjamService } from '../../services';
 
 const RiwayatPinjam = () => {
@@ -20,10 +21,13 @@ const RiwayatPinjam = () => {
     getPinjam();
   }, []);
   return (
-    <div className="-my-2 py-2 overflow-x-auto">
-      <div className="align-middle rounded-tl-lg rounded-tr-lg inline-block w-full py-4 overflow-hidden bg-white shadow-lg px-12">
-        <div className="flex justify-between">
-          <h2>Halaman Riwayat peminjaman</h2>
+    <div>
+      <HeaderPage />
+      <div className="-my-2 py-2 overflow-x-auto">
+        <div className="align-middle rounded-tl-lg rounded-tr-lg inline-block w-full py-4 overflow-hidden bg-white shadow-lg px-12">
+          <div className="flex justify-between">
+            <h2>Halaman Riwayat peminjaman</h2>
+          </div>
         </div>
       </div>
     </div>

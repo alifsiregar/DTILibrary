@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { bukuService } from '../../services';
+import { HeaderPage } from '../../components';
 
 const DetailBukuUser = ({ match }) => {
   const [detailBuku, setDetailBuku] = useState([]);
@@ -20,6 +21,7 @@ const DetailBukuUser = ({ match }) => {
   }, [match.params.bukuNama]);
   return (
     <section className="text-gray-700 body-font overflow-hidden bg-white">
+      <HeaderPage />
       <div className="container px-5 py-24 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           <img

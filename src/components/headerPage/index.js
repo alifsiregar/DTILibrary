@@ -9,7 +9,7 @@ const HeaderPage = () => {
   const logout = () => {
     deleteCookie('userData');
     deleteCookie('token');
-    window.location.replace('/auth');
+    window.location.replace('/');
   };
   return (
     <nav className="bg-primary-dark">

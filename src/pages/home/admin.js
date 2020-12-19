@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { homeBg } from '../../assets';
 import { adminAuth } from '../../services';
 import { setCookie } from '../../utils/cookie';
 
 function AdminLogin() {
+  const history = useHistory();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoginLoading, setLoginLoading] = useState(false);
@@ -17,6 +18,7 @@ function AdminLogin() {
       .then((res) => {
         const cookieToken = res.data.token;
         setCookie('token', JSON.stringify(cookieToken), 10000);
+        history.push('/rakbuku');
       })
       .catch(() => {
         setError('Username/Password Salah');
