@@ -1,3 +1,5 @@
+export { default as bukuService } from './buku';
+export { default as pinjamService } from './buku';
 export { default as baseService } from './baseService';
 export { default as authService } from './auth';
 export { default as adminAuth } from './admin';
