@@ -20,8 +20,17 @@ function Home() {
         setCookie('userData', JSON.stringify(cookieUser), 10000);
         setCookie('token', JSON.stringify(cookieToken), 10000);
       })
-      .catch(() => {
-        setError('Username/Password Salah');
+      .catch((err) => {
+        if (
+          err.response.data.error !== null &&
+          err.response.data.error !== undefined &&
+          err.response.data.error !== ''
+        ) {
+          setError(err.response.data.error);
+        } else {
+          setError('Username / Password Salah');
+        }
+        console.log(err.response.data.error);
       })
       .finally(() => {
         setLoginLoading(false);

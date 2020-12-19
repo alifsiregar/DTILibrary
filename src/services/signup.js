@@ -7,7 +7,10 @@ const signup = (
   email,
   birthdate,
   gender,
+  phone,
   address,
+  // eslint-disable-next-line camelcase
+  raw_password,
   password
 ) => {
   return BaseService.post(API.SIGNUP, {
@@ -16,7 +19,9 @@ const signup = (
     email,
     birthdate,
     gender,
+    phone,
     address,
+    raw_password,
     password,
   });
 };
