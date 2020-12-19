@@ -1,4 +1,9 @@
 export default {
+  GETBUKUUSER: '/buku',
+  BUKUNAMA: (bukuNama) => {
+    return `/buku/judul/${bukuNama}`;
+  },
+  PINJAM: '/pinjam',
   LOGIN: '/login',
   ADMIN: '/admin',
   SIGNUP: '/signup',

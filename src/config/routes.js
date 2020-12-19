@@ -1,4 +1,8 @@
 import {
+  DetailBukuUser,
+  RiwayatPinjam,
+  KatalogBuku,
+  PeminjamanBuku,
   AdminLogin,
   Home,
   UserRegistration,
@@ -49,6 +53,27 @@ const routes = [
   {
     path: '/admin',
     component: AdminLogin,
+    isPublic: true,
+  },
+
+  {
+    path: '/katalog/:bukuNama',
+    component: DetailBukuUser,
+    isPublic: true,
+  },
+  {
+    path: '/katalog',
+    component: KatalogBuku,
+    isPublic: true,
+  },
+  {
+    path: '/peminjaman/:bukuNama',
+    component: PeminjamanBuku,
+    isPublic: true,
+  },
+  {
+    path: '/pengembalian',
+    component: RiwayatPinjam,
     isPublic: true,
   },
   {
