@@ -1,5 +1,5 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable arrow-body-style */
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useEffect } from 'react';

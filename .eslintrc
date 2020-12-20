@@ -11,7 +11,7 @@
     "document": true,
     "React": "writable"
   },
-  "extends": ["eslint:recommended", "plugin:react-hooks/recommended", "airbnb"],
+  "extends": ["eslint:recommended", "plugin:react-hooks/recommended"],
 
   "parser": "babel-eslint",
   "parserOptions": {

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { bukuService } from '../../services';
@@ -44,10 +45,12 @@ const DetailBukuUser = ({ match }) => {
             <p className="leading-relaxed mb-4">{detailBuku.sinopsis}</p>
             <hr />
             <div className="flex mt-5">
+              {/* eslint-disable-next-line max-len */}
               <span className="title-font font-medium text-2xl text-gray-900">{`Tersedia ${detailBuku.stokTersedia} Buku`}</span>
               <Link to={`/peminjaman/${detailBuku.judul}`}>
                 <button
                   type="button"
+                  /* eslint-disable-next-line max-len */
                   className="flex ml-20 text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
                 >
                   Pinjam

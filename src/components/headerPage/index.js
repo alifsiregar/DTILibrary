@@ -1,5 +1,4 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { isUserAuthenticated, deleteCookie } from '../../utils/cookie';
@@ -21,6 +20,7 @@ const HeaderPage = () => {
                 {listMenu.map((name) => {
                   return (
                     <Link to={`/${name}`} key={name}>
+                      {/* eslint-disable-next-line max-len */}
                       <div className="text-gray-300 hover:bg-primary hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium text-transform: uppercase">
                         {name}
                       </div>
@@ -29,6 +29,7 @@ const HeaderPage = () => {
                 })}
                 {isUserAuthenticated() ? (
                   <div
+                    /* eslint-disable-next-line max-len */
                     className=" cursor-pointer text-transform: uppercase text-gray-300 hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md text-sm font-medium"
                     onClick={() => {
                       logout();
