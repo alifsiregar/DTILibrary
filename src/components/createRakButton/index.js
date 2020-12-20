@@ -1,4 +1,5 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable no-unused-vars */
+
 /* eslint-disable arrow-body-style */
 import React, { useState } from 'react';
 import 'react-responsive-modal/styles.css';

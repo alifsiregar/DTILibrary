@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/button-has-type */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
