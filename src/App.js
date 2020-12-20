@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
